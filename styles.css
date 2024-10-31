@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #8B9A5B;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin-top: 20px;
+}
+
+.header-title {
+    display: block;
+    margin: 0;
+    font-size: 1.8em;
+    line-height: 1.2;
+}
+
+.sub-title {
+    text-align: center;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.header-row, .data-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+.header-cell, .data-cell {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.data-cell {
+    font-weight: normal;
+}
+
+@media (max-width: 600px) {
+    /* Ajuste para que todas as colunas se encaixem */
+    .header-title {
+        font-size: 1.5em;
+    }
+
+    .header-cell, .data-cell {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+
+.download-button {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1em; /* Tamanho da fonte */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.download-button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
