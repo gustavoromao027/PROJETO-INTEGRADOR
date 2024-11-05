@@ -17,8 +17,8 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
   - `js/`: Contém o JavaScript para funcionalidade do portal.
 - **assets**: Contém recursos adicionais.
   - `boletimcompleto.pdf`: PDF com os preços diários.
-  - `dados/`: JSON com os dados do Ceasa.
-  - `images/`: Ícones e imagens utilizadas no projeto.
+  - `dados_ceasa`: JSON com os dados do Ceasa.
+  - `icon.png/`: Ícones e imagens utilizadas no projeto.
 - **scripts**: Extração de dados.
   - `gerar_dados.py`: Script para leitura do PDF.
   - `main.py/`: Script para gerar dados para o JSON.
@@ -33,13 +33,12 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
 2. Extração de Dados do PDF:
    - Utilize a main.py para extrair dados do PDF e gerar o arquivo dados_ceasa.json.
    ```bash
-   - python assets/main.py
+   - python scripts/main.py
 3. Iniciar o Servidor Local:
    - Abra um terminal no diretório src/ e inicie um servidor local.
    ```bash
    - python -m http.server
    - Acesse http://localhost:8000 no navegador para visualizar o portal.
 
-
-  
-
+## Demonstração do Projeto
+[Assista à demonstração no YouTube](https://youtu.be/c8hVL7JL5Lc)

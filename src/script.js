@@ -3,7 +3,7 @@ let currentPage = 0;
 const itemsPerPage = 30; // Define quantos itens você deseja por página
 
 function loadData() {
-    fetch('dados_ceasa.json') // Nome do arquivo JSON
+    fetch('../assets/dados_ceasa.json') // Para buscar o JSON
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -19,6 +19,9 @@ function loadData() {
             document.getElementById('dataDisplay').innerHTML = '<p>Erro ao carregar os dados.</p>';
         });
 }
+
+// O restante do código permanece igual
+
 
 function applyFilter() {
     const searchTerm = document.getElementById('searchBox').value.toLowerCase();

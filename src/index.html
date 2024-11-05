@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="icon.png" sizes="195x172">
+    <link rel="icon" type="image/png" href="../assets/icon.png" sizes="195x172">
     <title>Portal Ceasa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="icon.png" alt="Ícone do Portal" class="header-icon">
+            <img src="../assets/icon.png" alt="Ícone do Portal" class="header-icon">
             <div class="header-title-container">
-                <h1 class="header-title">Portal de Preços - Ceasa ES - Gustavo Romão</h1>
-                <h2 class="sub-title">Grande Vitória - ES - 28/10/24</h2>
+                <h1 class="header-title">Portal de Preços - Ceasa ES</h1>
+                <h2 class="sub-title">Grande Vitória - ES - 04/11/24</h2>
             </div>
         </header>
         <div class="controls">
@@ -22,8 +22,6 @@
             <button id="nextPage" onclick="nextPage()">>>></button>
         </div>
         <div id="dataDisplay"></div>
-
-
         <div class="filters">
             <input type="text" id="searchBox" placeholder="Pesquisar por nome..." style="margin-right: 10px;">
             <button onclick="applyFilter()">Filtrar</button>
@@ -32,12 +30,8 @@
             <label><input type="checkbox" id="sortExpensive" onclick="toggleSort(this)">(R$) Mais caros</label>
             <label><input type="checkbox" id="sortCheap" onclick="toggleSort(this)">(R$) Mais baratos</label>
         </div>
-
-
-        </div>
     </div>
     <script src="script.js"></script>
-    <a href="boletimcompleto.pdf" download class="download-button">PDF ☁️</a>
-
+    <a href="../assets/boletimcompleto.pdf" download class="download-button">PDF ☁️</a>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import pdfplumber
 import json
 
-pdf_path = "boletimcompleto.pdf"
+pdf_path = "assets/boletimcompleto.pdf"
 dados_ceasa = []
 
 with pdfplumber.open(pdf_path) as pdf:
@@ -15,5 +15,5 @@ with pdfplumber.open(pdf_path) as pdf:
             print(f"Não foram encontradas tabelas na página {numero_pagina}.")
 
 # Salva os dados extraídos em um arquivo JSON
-with open("dados_ceasa.json", "w") as json_file:
+with open("assets/dados_ceasa.json", "w") as json_file:
     json.dump(dados_ceasa, json_file)
