@@ -1,3 +1,8 @@
+/*
+-----------------------
+ESTILO GERAL DA PAGINA E ESTRUTURA
+-----------------------
+*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -62,6 +67,11 @@ header {
     font-weight: normal;
 }
 
+/*
+-----------------------
+RESPONSIVIDADE POR TAMANHO DE TELA
+-----------------------
+*/
 @media (max-width: 600px) {
     .header-title {
         font-size: 1.5em;
@@ -76,22 +86,26 @@ header {
         padding: 10px;
     }
 }
-
+/*
+-----------------------
+BOTÃO DOWNLOAD PDF
+-----------------------
+*/
 .download-button {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px; /* Distância do fundo */
-    right: 20px; /* Distância da direita */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     padding: 10px 15px;
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 1em; /* Tamanho da fonte */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: background-color 0.3s; /* Transição suave para hover */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.download-button:hover {
+    background-color: #45a049;
 }
 
-.download-button:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
-}

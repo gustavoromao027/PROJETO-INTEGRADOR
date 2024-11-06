@@ -1,9 +1,14 @@
+// Autor: Gustavo Romão
+// Projeto: Portal de Preços - Ceasa
+// Data de criação: 29/10/2024
+// Descrição: MANIPULAÇÃO E EXIBIÇÃO DOS DADOS E FUNÇÕES DA TELA
+
 let pagesData = [];
 let currentPage = 0;
-const itemsPerPage = 30; // Define quantos itens você deseja por página
+const itemsPerPage = 30; //QUANTIDADE DE ITENS POR PAGINA
 
 function loadData() {
-    fetch('../assets/dados_ceasa.json') // Para buscar o JSON
+    fetch('../assets/dados_ceasa.json') //BUSCANDO O JSON
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -11,8 +16,8 @@ function loadData() {
             return response.json();
         })
         .then(data => {
-            pagesData = data.slice(1); // Ignora a primeira linha (detalhes do boletim)
-            displayPage(currentPage); // Exibe a primeira página
+            pagesData = data.slice(1); // IGNORA A PRIMEIRA LINHA (DETALHES DO BOLETIM)
+            displayPage(currentPage); // EXIBE A PRIMEIRA PAGINA
         })
         .catch(error => {
             console.error('Houve um problema com a requisição Fetch:', error);
@@ -20,23 +25,20 @@ function loadData() {
         });
 }
 
-// O restante do código permanece igual
-
-
 function applyFilter() {
     const searchTerm = document.getElementById('searchBox').value.toLowerCase();
     const sortExpensive = document.getElementById('sortExpensive').checked;
     const sortCheap = document.getElementById('sortCheap').checked;
 
-    currentPage = 0; // Resetar para a primeira página ao aplicar filtro
+    currentPage = 0; // RESETAR PARA A 1 PAGINA AO APLICAR O FILTRO
     displayPage(currentPage, searchTerm, sortExpensive, sortCheap);
 }
 
 function displayPage(page, searchTerm = '', sortExpensive = false, sortCheap = false) {
     const dataDisplay = document.getElementById('dataDisplay');
-    dataDisplay.innerHTML = ''; // Limpa o conteúdo anterior
+    dataDisplay.innerHTML = ''; // LIMPAR O CONTEUDO ANTERIOR
 
-    // Criar cabeçalho da tabela
+    // CABEÇALO DA TABELA
     const headerRow = document.createElement('div');
     headerRow.className = 'header-row';
     const headers = ['PRODUTO', 'EMBALAGEM', 'MIN', 'M.C.', 'MAX', 'SITUAÇÃO'];
@@ -48,32 +50,32 @@ function displayPage(page, searchTerm = '', sortExpensive = false, sortCheap = f
     });
     dataDisplay.appendChild(headerRow);
 
-    // Filtrar os dados com base no termo de pesquisa
+    //FILTRAR COM BASE NO NOME
     const filteredData = pagesData.filter(row => 
-        row[0].toLowerCase().includes(searchTerm) // Filtra pela primeira coluna (nome do produto)
+        row[0].toLowerCase().includes(searchTerm) // FILTRA PELA 1 COLUNA (nome do produto)
     );
 
-    // Ordenar os dados se necessário
+    //ORDENAR DADOS SE NECESSARIO
     if (sortExpensive || sortCheap) {
         filteredData.sort((a, b) => {
-            const priceA = a[2] ? parseFloat(a[2].replace(',', '.')) : 0; // Preço A
-            const priceB = b[2] ? parseFloat(b[2].replace(',', '.')) : 0; // Preço B
+            const priceA = a[2] ? parseFloat(a[2].replace(',', '.')) : 0; // PREÇO A
+            const priceB = b[2] ? parseFloat(b[2].replace(',', '.')) : 0; // PREÇO B
 
-            // Ordenar com base na escolha do usuário
+            //ORDENAR COM BASE NA ESCOLHA DO USUARIO
             return sortExpensive ? priceB - priceA : priceA - priceB;
         });
     }
 
-    const start = page * itemsPerPage; // Índice inicial
-    const end = start + itemsPerPage; // Índice final
-    const pageData = filteredData.slice(start, end); // Pega os dados da página atual
+    const start = page * itemsPerPage; // INDICE INICIAL
+    const end = start + itemsPerPage; // INDICE FINAL
+    const pageData = filteredData.slice(start, end); // PEGA OS DADOS DA PAGINA ATUAL
 
     if (pageData.length > 0) {
         pageData.forEach(row => {
             const rowElement = document.createElement('div');
             rowElement.className = 'data-row';
 
-            // Adiciona cada célula da linha com os dados correspondentes
+            // ADICIONA CADA CÉLULA DE LINHA COM OS DADOS CORRESPONDENTES
             row.forEach(cellData => {
                 const cell = document.createElement('span');
                 cell.className = 'data-cell';
@@ -89,26 +91,27 @@ function displayPage(page, searchTerm = '', sortExpensive = false, sortCheap = f
     }
 }
 
+
+// NÃO MARCAR 2 CHECKBOX AO MESMO TEMPO
 function toggleSort(checkbox) {
     const otherCheckbox = checkbox.id === 'sortExpensive' ? document.getElementById('sortCheap') : document.getElementById('sortExpensive');
     if (checkbox.checked) {
-        otherCheckbox.checked = false; // Desmarcar o outro checkbox
+        otherCheckbox.checked = false;
     }
 }
-
+// PROXIMA PAGINA >>>
 function nextPage() {
     if (currentPage < Math.ceil(pagesData.length / itemsPerPage) - 1) {
         currentPage++;
         displayPage(currentPage);
     }
 }
-
+// PAGINA ANTERIOR <<<
 function previousPage() {
     if (currentPage > 0) {
         currentPage--;
         displayPage(currentPage);
     }
 }
-
-// Chama loadData quando a página é carregada
+// CHAMA loadData QUANDO A PAGINA É CARREGADA
 window.onload = loadData;

@@ -21,7 +21,7 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
   - `icon.png/`: Ícones e imagens utilizadas no projeto.
 - **scripts**: Extração de dados.
   - `gerar_dados.py`: Script para leitura do PDF.
-  - `main.py/`: Script para gerar dados para o JSON.
+  - `processa_dados.py/`: Script para gerar dados para o JSON.
 - **docs**: Documentação do Portal.
   - `PROJETO INTEGRADOR 3.pdf`: Leitura em PDF.
   - `PROJETO INTEGRADOR 3.docx`: Leitura em Docx.
@@ -31,9 +31,9 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
    ```bash
    - git clone https://github.com/gustavoromao027/PROJETO-INTEGRADOR-3
 2. Extração de Dados do PDF:
-   - Utilize a main.py para extrair dados do PDF e gerar o arquivo dados_ceasa.json.
+   - Utilize a processa_dados.py para extrair dados do PDF e gerar o arquivo dados_ceasa.json.
    ```bash
-   - python scripts/main.py
+   - python scripts/processa_dados.py
 3. Iniciar o Servidor Local:
    - Abra um terminal no diretório src/ e inicie um servidor local.
    ```bash
@@ -42,3 +42,7 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
 
 ## Demonstração do Projeto
 [Assista à demonstração no YouTube](https://youtu.be/c8hVL7JL5Lc)
+
+## Autor
+Gustavo Romão  
+Projeto desenvolvido como parte do [PROJETO INTEGRADOR 3]. 
