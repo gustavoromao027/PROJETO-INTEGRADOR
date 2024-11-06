@@ -29,7 +29,7 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
 ## Como rodar o projeto
 1. Clone o repositório:
    ```bash
-   - git clone https://github.com/gustavoromao027/INTEGRADOR-3.git
+   - git clone https://github.com/gustavoromao027/PROJETO-INTEGRADOR-3
 2. Extração de Dados do PDF:
    - Utilize a main.py para extrair dados do PDF e gerar o arquivo dados_ceasa.json.
    ```bash
