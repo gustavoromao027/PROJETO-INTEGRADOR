@@ -30,7 +30,7 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
    ```bash
    - git clone https://github.com/gustavoromao027/PROJETO-INTEGRADOR-3
 2. Extração de Dados do PDF:
-   - Utilize a processa_dados.py para extrair dados do PDF e gerar o arquivo dados_ceasa.json.
+   - Utilize o processa_dados.py para extrair dados do PDF e gerar o arquivo dados_ceasa.json.
    ```bash
    - python scripts/processa_dados.py
 3. Iniciar o Servidor Local:
