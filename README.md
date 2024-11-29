@@ -12,13 +12,15 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
 
 ## Estrutura do Projeto
 - **src**: Contém o HTML, CSS e JavaScript principais.
+  - `legenda.html`: Pagina aonde são mostradas as legendas.
   - `index.html`: Estrutura da página principal.
   - `styles.css`: Contém o CSS para estilização do portal.
   - `script.js`: Contém o JavaScript para funcionalidade do portal.
 - **assets**: Contém recursos adicionais.
   - `boletimcompleto.pdf`: PDF com os preços diários.
   - `dados_ceasa`: JSON com os dados do Ceasa.
-  - `icon.png/`: Ícones e imagens utilizadas no projeto.
+  - `fundo_site.jpg`: Imagem ao fundo do site do Portal.
+  - `icon.png/`: Ícones utilizado no Portal.
 - **scripts**: Extração de dados.
   - `processa_dados.py/`: Script para gerar dados para o JSON.
 - **docs**: Documentação do Portal.
@@ -37,10 +39,10 @@ Este é um portal desenvolvido para exibir os preços dos produtos da Ceasa-ES, 
    - Abra um terminal no diretório src/ e inicie um servidor local.
    ```bash
    - python -m http.server
-   - Acesse http://localhost:8000 no navegador para visualizar o portal.
+   - Acesse http://localhost:8000/src/ no navegador para visualizar o portal.
 
 ## Demonstração do Projeto
-[Assista à demonstração no YouTube](https://youtu.be/c8hVL7JL5Lc)
+[Assista à demonstração no YouTube](https://youtu.be/BJkIPxNJUP0)
 
 ## Autor
 Gustavo Romão  

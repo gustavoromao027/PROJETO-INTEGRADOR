@@ -6,8 +6,11 @@ ESTILO GERAL DA PAGINA E ESTRUTURA
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #8B9A5B;
+    padding: 0;
+    background-image: url('../assets/fundo_site.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
 }
 
 .container {
@@ -86,9 +89,10 @@ RESPONSIVIDADE POR TAMANHO DE TELA
         padding: 10px;
     }
 }
+
 /*
 -----------------------
-BOTÃO DOWNLOAD PDF
+BOTÃO DOWNLOAD DO PDF
 -----------------------
 */
 .download-button {
@@ -109,3 +113,57 @@ BOTÃO DOWNLOAD PDF
     background-color: #45a049;
 }
 
+
+/*
+-----------------------
+BOTÃO DE LEGENDA
+-----------------------
+*/
+.legend-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    float: right;
+    margin-top: -15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.legend-button:hover {
+    background-color: #0056b3;
+}
+
+/* PÁGINA DA LEGENDA */
+.legend {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.legend ul {
+    padding-left: 20px;
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

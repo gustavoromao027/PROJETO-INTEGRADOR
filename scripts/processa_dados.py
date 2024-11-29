@@ -15,6 +15,7 @@ with pdfplumber.open(pdf_path) as pdf:
             for tabela in tabelas:
                 for linha in tabela:
                     dados_ceasa.append(linha) #ARMAZENA TODAS AS LINHAS NA LISTA
+            print(f"!!! DADOS PROCESSADOS COM SUCESSO !!!")
         else:
             print(f"Não foram encontradas tabelas na página {numero_pagina}.")
             

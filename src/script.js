@@ -1,4 +1,3 @@
-// Autor: Gustavo Romão
 // Projeto: Portal de Preços - Ceasa
 // Data de criação: 29/10/2024
 // Descrição: MANIPULAÇÃO E EXIBIÇÃO DOS DADOS E FUNÇÕES DA TELA
@@ -91,6 +90,16 @@ function displayPage(page, searchTerm = '', sortExpensive = false, sortCheap = f
     }
 }
 
+function toggleLegend() {
+    const legendDisplay = document.getElementById('legendDisplay');
+    const showLegendCheckbox = document.getElementById('showLegend');
+    
+    if (showLegendCheckbox.checked) {
+        legendDisplay.classList.remove('hidden');
+    } else {
+        legendDisplay.classList.add('hidden');
+    }
+}
 
 // NÃO MARCAR 2 CHECKBOX AO MESMO TEMPO
 function toggleSort(checkbox) {
